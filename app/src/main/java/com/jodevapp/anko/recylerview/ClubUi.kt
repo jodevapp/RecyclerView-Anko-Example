@@ -25,17 +25,18 @@ class ClubUi : AnkoComponent<ViewGroup> {
 
             imageView {
                 id = ivImage
-                layoutParams = LinearLayout.LayoutParams(wrapContent, wrapContent)
-                layoutParams.height = dip(40)
-                layoutParams.width = dip(40)
+            }.lparams {
+                height = dip(40)
+                width = dip(40)
+                gravity = Gravity.CENTER
             }
 
             textView {
                 id = tvName
-                layoutParams = LinearLayout.LayoutParams(wrapContent, wrapContent)
                 textSize = 16f
-                (layoutParams as LinearLayout.LayoutParams).gravity = Gravity.CENTER
-                (layoutParams as LinearLayout.LayoutParams).margin = dip(10)
+            }.lparams {
+                gravity = Gravity.CENTER
+                margin = dip(10)
             }
         }
     }
