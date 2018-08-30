@@ -4,12 +4,15 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import com.jodevapp.anko.recylerview.R.array.*
-import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.matchParent
 import org.jetbrains.anko.recyclerview.v7.recyclerView
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.verticalLayout
 import org.jetbrains.anko.wrapContent
 
+/**
+ * Created by jodevapp on 8/29/18.
+ */
 class MainActivity : AppCompatActivity() {
 
     private var clubs: MutableList<Club> = mutableListOf()
@@ -24,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             recyclerView {
                 layoutManager = LinearLayoutManager(context)
                 adapter = RecyclerViewAdapter(context, clubs) {
-                    startActivity(intentFor<SecondActivity>("clubName" to "${it.name}", "clubImage" to "${it.image}", "clubDesc" to "${it.desc}"))
+                    startActivity<SecondActivity>("clubBundle" to it)
                 }
             }
         }

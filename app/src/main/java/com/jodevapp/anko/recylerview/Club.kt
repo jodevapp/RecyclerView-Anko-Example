@@ -1,6 +1,10 @@
 package com.jodevapp.anko.recylerview
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
 /**
- * Created by root on 1/16/18.
+ * Created by jodevapp on 8/29/18.
  */
-data class Club (val name: String?, val image: Int?, val desc: String?)
+@Parcelize
+data class Club (val name: String?, val image: Int?, val desc: String?): Parcelable

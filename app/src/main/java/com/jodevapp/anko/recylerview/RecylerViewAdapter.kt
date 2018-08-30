@@ -11,7 +11,7 @@ import kotlinx.android.extensions.LayoutContainer
 import org.jetbrains.anko.AnkoContext
 
 /**
- * Created by root on 1/16/18.
+ * Created by jodevapp on 8/29/18.
  */
 class RecyclerViewAdapter(private val context: Context, private val clubs: List<Club>, private val listener: (Club) -> Unit)
     : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {

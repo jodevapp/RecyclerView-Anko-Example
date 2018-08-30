@@ -7,13 +7,13 @@ import android.widget.LinearLayout
 import org.jetbrains.anko.*
 
 /**
- * Created by WORKnPLAYDev on 8/29/2018.
+ * Created by jodevapp on 8/29/18.
  */
 class ClubUi : AnkoComponent<ViewGroup> {
 
     companion object {
-        val tvName = 1
-        val ivImage = 2
+        const val tvName = 1
+        const val ivImage = 2
     }
 
     override fun createView(ui: AnkoContext<ViewGroup>): View = with(ui) {
